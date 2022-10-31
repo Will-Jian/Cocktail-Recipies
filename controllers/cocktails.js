@@ -14,9 +14,9 @@ function index(req, res) {
     });
   }
   function show(req, res) {
-    Flight.findById(req.params.id, function(err, flight) {
-        T
-            res.render('cocktails/show', { title: 'Cocktail Detail', flight,  });
+    Cocktail.findById(req.params.id, function(err, cocktail) {
+        
+            res.render('cocktails/show', { title: 'Cocktail Detail', cocktail,  });
           });
     
     }

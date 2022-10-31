@@ -1,4 +1,29 @@
 <%- include('../partials/header') %>
 <h2>Cocktail List</h2>
 
+
+<table>
+    <thead>
+      <tr>
+        <th>Title</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+          <!-- Write the line of EJS to iterate over movies using forEach -->
+     <% cocktails.forEach(function(c) { %>
+
+        <tr>
+          <td><%= c.title %></td>
+          
+          <td> <a href="/cocktails/<%= c._id %>">DETAILS</a>  </td>
+        </tr>
+      <!-- Close the forEach using EJS here -->
+      <% }); %> 
+    </tbody>
+  </table>
+
+
+
+
 <%- include('../partials/footer') %>
