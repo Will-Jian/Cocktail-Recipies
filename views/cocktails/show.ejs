@@ -2,6 +2,35 @@
 <section id="show-page">
     <div>Title: </div> 
     <div><%= cocktail.title %></div>
+
+    <div>Ingredients: </div> 
+    <div><%= cocktail.ingredients %></div>
+
+    <div>Description: </div> 
+    <div><%= cocktail.description %></div>
+
     
+
+
+
+
+    <div>Registered Comments</div>
+    <h2> </h2>
+    <section id="badge-container">
+        <% comments.forEach(function(c) { %>
+          <article class="badge"><%= c.comment %></article>
+        <% }) %>
+      </section>
+      <h2> </h2>
+      <div> Please add comment below </div>
+     
+    <a href="/cocktails/<%=cocktail._id %>/comments/new">Add Ticket</a>
+
+
+
+
+
+
+
   </section>
   <%- include('../partials/footer') %>
