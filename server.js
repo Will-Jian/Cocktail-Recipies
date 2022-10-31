@@ -8,6 +8,7 @@ const passport = require('passport');
 var methodOverride = require('method-override');
 require('dotenv').config();
 require('./config/database');
+require('./config/passport');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/cocktails');
 
@@ -26,14 +27,14 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(methodOverride('_method')); 
 app.use(express.static(path.join(__dirname, 'public')));
 
 
 
 
-app.use(passport.initialize());
-app.use(passport.session());
 
 app.use(function(req, res, next) {
   res.locals.user = req.user;
