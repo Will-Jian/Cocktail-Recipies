@@ -13,10 +13,10 @@
     <nav><a href="/">HOME or WHATEVER YOU WANT</a></nav>
     <nav>
         
-        <a href="/movies" <%- title === 'All Movies' ? 'class="active"' : '' %>>ALL MOVIES</a>
+        <a href="/cocktails" <%- title === 'All Movies' ? 'class="active"' : '' %>>ALL Recipies</a>
         <% if (user) { %>
-          <a href="/performers/new"    <%- title === 'Add Performer' ? 'class="active"' : '' %>>
-              ADD PERFORMER</a>
+          <a href="/cocktails/new"    <%- title === 'Add cocktail' ? 'class="active"' : '' %>>
+              ADD cocktail</a>
           <a href="/movies/new" <%- title === 'Add Movie' ? 'class="active"' : '' %>>ADD MOVIE</a>
           <a href="/logout">LOG OUT</a>
         <% } else { %>
