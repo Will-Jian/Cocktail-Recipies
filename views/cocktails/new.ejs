@@ -3,14 +3,22 @@
 
 <form action="/cocktails" method="POST">
 
-<label>title :</label>
-<input type="text" name="title">
-<label>ingredients :</label>
+
+<div id="newCocktail"> <label>Name of the Drink :</label> 
+ <input type="text" name="title"> 
+
+
+<label>Ingredients Needed:</label>
 <input type="text" name="ingredients">
+
 <label>Description :</label>
-<input type="text" name="description">
-  
+<textarea type="text" name="description"></textarea>
+
+</div>
+
+<div id="addButton">
     <button type="submit">Add Drink</button>
+</div>
 </form>
 
 <%- include('../partials/footer') %>

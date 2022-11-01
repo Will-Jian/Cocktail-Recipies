@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: teal;
 }
 
 a {
@@ -16,4 +17,105 @@ a {
 
 .login img {
   height: 30px;
+}
+
+
+body > nav {
+  grid-area: nav;
+  background-color: #B8C0C2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+  height: 35px;
+}
+
+nav > img {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+nav > a {
+  margin: 10px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav > a:hover:not(.active) {
+  color: white;
+  background-color: #424748;
+}
+
+nav > a.active {
+  color: white;
+  cursor: default;
+}
+#show-page {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  align-self: center;
+  justify-content: center; 
+  
+}
+
+#show-page-title{
+  display: flex;
+  align-self: center;
+  justify-content: center; 
+  margin: 20px;
+  font-size: 35px;
+}
+
+#listIndex {
+  display: grid;
+color: white
+
+}
+#commentShow{
+  display:grid;
+}
+
+.comment{
+
+margin: 20px;
+}
+
+#editButtons {
+  display:flex;
+  justify-content: flex-end;
+}
+
+#deleteComment{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+color:white;
+}
+
+#updateComment{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: red
+}
+
+#newCocktail{
+
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 25px;
+  justify-content: space-evenly;
+  grid-gap: 1rem;
+
+}
+
+#addButton{
+
+  display: flex;
+  align-self: center;
+  justify-content: center; 
+  margin: 20px;
 }
