@@ -14,4 +14,5 @@ router.get('/:id', cocktailsCtrl.show);
 // POST /movies (handle the new form being submitted)
 router.post('/', ensureLoggedIn, cocktailsCtrl.create);
 
+router.delete('/:id', ensureLoggedIn, cocktailsCtrl.delete)
 module.exports = router;

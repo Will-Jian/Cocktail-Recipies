@@ -1,4 +1,9 @@
 <%- include('../partials/header') %>
+
+<form action="/cocktails/<%= cocktail._id %>?_method=DELETE" method="POST">
+    <button type="submit">X</button>
+  </form>
+
 <section id="show-page">
     <div>Title: </div> 
     <div><%= cocktail.title %></div>

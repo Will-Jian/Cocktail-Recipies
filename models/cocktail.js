@@ -40,6 +40,14 @@ const cocktailSchema = new Schema({
         type: String,   
     },
     comments: [commentSchema],
+    
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+      },
+      userName: String,
+      userAvatar: String
 
 
 
