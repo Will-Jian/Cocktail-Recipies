@@ -9,34 +9,23 @@
     <div>Description: </div> 
     <div><%= cocktail.description %></div>
 
-    
-
-
-
-<% if (cocktail.comments.length) { %>
-    <table>
-      <thead>
-        <tr>
-          
-      
-        </tr>
-      </thead>
-      <tbody>
-        <% cocktail.comments.forEach(function(c) { %>
-          <tr>
-            <td><%= c.comment %></td>
-      
-          </tr>
-        <% }); %>
-      </tbody>
-    </table>
-  <% } else { %>
-    <h5>No comments Yet</h5>
-  <% } %>
-
-
-
   
+
+
+
+<h2>Comments</h2>
+  
+<% cocktail.comments.forEach(function(comment) { %>
+    <div class="comment">
+      <%= comment.comment %><br>
+      <% if (user && comment.user.equals(user._id)) { %>
+        <form action="/comments/<%= comment._id %>?_method=DELETE" method="POST">
+          <button type="submit">X</button>
+        </form>
+      <% } %>
+    </div>
+  <% }) %>
+
 
 
   <form action="/cocktails/<%= cocktail._id %>/comments" method="POST">
@@ -44,6 +33,10 @@
     <input name="comment">
     <button type="submit">ADD COMMENT</button>
   </form>
+
+
+  
+
 
   </section>
 
