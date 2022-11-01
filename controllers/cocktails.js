@@ -29,12 +29,8 @@ function index(req, res) {
 
     function create(req,res){
     
-            for (let key in req.body){
-                 if (req.body[key] === '') delete req.body[key];
-            } 
-         
-         
              const cocktail = new Cocktail(req.body);
+
              cocktail.save(function(err) {
                // if we don't redirect, the new page will be shown
                // with /movies in the address bar
@@ -44,3 +40,15 @@ function index(req, res) {
                res.redirect('/cocktails');
              });
              }
+
+
+/*
+function deleteCocktail(res,req){
+Cocktail.findOneAndDelete(
+{_id: req.params.id, userRecommending: req.user._id}, function(err){
+    res.redirect('/cocktails')
+}
+
+)
+}
+*/

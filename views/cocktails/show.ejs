@@ -13,24 +13,40 @@
 
 
 
+<% if (cocktail.comments.length) { %>
+    <table>
+      <thead>
+        <tr>
+          
+      
+        </tr>
+      </thead>
+      <tbody>
+        <% cocktail.comments.forEach(function(c) { %>
+          <tr>
+            <td><%= c.comment %></td>
+      
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No comments Yet</h5>
+  <% } %>
 
-    <div>Registered Comments</div>
-    <h2> </h2>
-    <section id="badge-container">
-        <% comments.forEach(function(c) { %>
-          <article class="badge"><%= c.comment %></article>
-        <% }) %>
-      </section>
-      <h2> </h2>
-      <div> Please add comment below </div>
-     
-    <a href="/cocktails/<%=cocktail._id %>/comments/new">Add Ticket</a>
 
 
+  
 
 
-
-
+  <form action="/cocktails/<%= cocktail._id %>/comments" method="POST">
+    <!-- Be sure name attributes of inputs match the model properties -->
+    <input name="comment">
+    <button type="submit">ADD COMMENT</button>
+  </form>
 
   </section>
+
+
+
   <%- include('../partials/footer') %>
