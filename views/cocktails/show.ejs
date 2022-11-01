@@ -1,8 +1,18 @@
 <%- include('../partials/header') %>
 
+
+<% if (user && cocktail.user.equals(user._id)) { %>
 <form action="/cocktails/<%= cocktail._id %>?_method=DELETE" method="POST">
     <button type="submit">X</button>
   </form>
+
+
+
+  <a href="/cocktails/<%= cocktail._id %>/edit?_method=EDIT"> Edit</a>
+
+  <% } %>
+
+
 
 <section id="show-page">
     <div>Title: </div> 

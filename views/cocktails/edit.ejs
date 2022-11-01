@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<form action="/cocktails/<%= cocktail._id %>?_method=PUT" method="POST">
+<label>title :</label>
+<input type="text" name="title" value = "<%=cocktail.title%>">
+<label>ingredients :</label>
+<input type="text" name="ingredients" value = "<%=cocktail.ingredients%>">
+<label>Description :</label>
+<input type="text" name="description" value = "<%=cocktail.description%>">
+  
+    <button type="submit">Edit Drink</button>
+</form>
+
+<%- include('../partials/footer') %>
+
