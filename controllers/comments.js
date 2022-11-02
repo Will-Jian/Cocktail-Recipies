@@ -11,6 +11,8 @@ edit,
 update
 }
 
+
+
 function edit(req, res) {
     // Note the cool "dot" syntax to query on the property of a subdoc
     Cocktail.findOne({'comments._id': req.params.id}, function(err, cocktail) {
