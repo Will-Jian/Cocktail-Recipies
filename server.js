@@ -34,14 +34,14 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(methodOverride('_method')); 
+app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
 
 
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.locals.user = req.user;
   next();
 });
@@ -49,16 +49,16 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/cocktails', cocktailsRouter)
 app.use('/users', usersRouter);
-app.use('/',commentsRouter)
+app.use('/', commentsRouter)
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

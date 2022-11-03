@@ -2,55 +2,44 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: teal;
+  color: rgb(235, 220, 156);
 }
-
-a {
-  color: #00B7FF;
+nav > a {
+  color: rgb(235, 220, 156);
 }
-
 .login {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 34px;
 }
-
 .login img {
   height: 30px;
 }
-
-
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: #17505f;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
   height: 35px;
+  border-radius: 12px;
 }
-
 nav > img {
   width: 34px;
   object-fit: contain;
   margin-right: auto;
 }
-
 nav > a {
   margin: 10px;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
 }
-
 nav > a:hover:not(.active) {
-  color: white;
-  background-color: #424748;
-}
-
-nav > a.active {
-  color: white;
-  cursor: default;
+  color: #17505f;
+  background-color: rgb(235, 220, 156);
 }
 #show-page {
   display: grid;
@@ -60,7 +49,9 @@ nav > a.active {
   justify-content: center; 
   
 }
-
+#drinks{
+  margin: 45px;
+}
 #show-page-title{
   display: flex;
   align-self: center;
@@ -68,54 +59,112 @@ nav > a.active {
   margin: 20px;
   font-size: 35px;
 }
-
 #listIndex {
-  display: grid;
-color: white
-
-}
-#commentShow{
   display:grid;
+  grid-template-columns: auto;
+  grid-gap: 1rem;
+  justify-content: center;
+  align-self: center;  
+  margin: 30px;
 }
+#listIndex > a {
+color: rgb(235, 220, 156);
+font-size: 18px;
+margin: 8px;
+}
+#commentShow {
+  display: grid;
+  grid-template-columns: auto ;
+  grid-gap: 1rem;
+  align-self: center;
+  justify-content: center; 
+  margin: 30px; 
+}
+h2 {
+  display:flex;
+  justify-content: center; 
+  font-size: 25px;
+  margin-top: 50px;
+}
+#addComment {
+  display:flex;
+  flex-direction: column;
+}
+#addComment > input {
+  height: 50px;
+  width: 350px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+#addComment > button {
+  border-radius: 5px;
+  color: rgb(235, 220, 156);
+  background-color: #17505f;
+} 
 
+#newCocktail > input {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+}
+#newCocktail > textarea {
+  border-radius: 10px;
+  width: 300px;
+  height: 50px;
+}
 .comment{
-
 margin: 20px;
 }
-
 #editButtons {
   display:flex;
+  flex-direction: column;
   justify-content: flex-end;
-}
+  margin: 10px;
 
+}
+#editButtons > form > button {
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #17505f;
+  color: rgb(235, 220, 156);
+}
+#editButtons > a > button {
+  border-radius: 5px;
+  background-color: #17505f;
+  color: rgb(235, 220, 156);
+}
 #deleteComment{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-color:white;
 }
-
 #updateComment{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  color: red
 }
-
 #newCocktail{
-
   display: grid;
   grid-template-columns: auto auto;
   margin: 25px;
   justify-content: space-evenly;
   grid-gap: 1rem;
-
+}
+#addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#addButton > button{
+  margin: 20px;
+  border-radius: 5px;
+  color: rgb(235, 220, 156);
+  background-color: #17505f;
 }
 
-#addButton{
-
+#homePage{
   display: flex;
-  align-self: center;
-  justify-content: center; 
-  margin: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px;
 }

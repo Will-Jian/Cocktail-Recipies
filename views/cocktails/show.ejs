@@ -8,13 +8,13 @@
 
 
 
-  <a href="/cocktails/<%= cocktail._id %>/edit?_method=EDIT"><button>Edit</button></a>
+  <a href="/cocktails/<%= cocktail._id %>/edit?_method=EDIT"><button>Edit Post</button></a>
 
   <% } %>
 
 </section>
 
-    
+<div id="drinks">
     <div id="show-page-title"><%= cocktail.title %></div>
     <section id="show-page">
     <div>Ingredients: </div> 
@@ -22,14 +22,11 @@
 
     <div>Description: </div> 
     <div><%= cocktail.description %></div>
-
-  
-
 </section>
-
-
+</div>
+<hr> 
 <section id="commentShow"> 
-<h2>Comments</h2>
+<h2 >Comments</h2>
 
 <% cocktail.comments.forEach(function(comment) { %>
     <div class="comment">
@@ -50,7 +47,7 @@
 
 
 
-  <form action="/cocktails/<%= cocktail._id %>/comments" method="POST">
+  <form id="addComment" action="/cocktails/<%= cocktail._id %>/comments" method="POST">
     <!-- Be sure name attributes of inputs match the model properties -->
     <input name="comment">
     <button type="submit">ADD COMMENT</button>
