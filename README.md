@@ -27,6 +27,6 @@ Users can log in via google accounts, and post and comments will be logged into 
 
 # Next Steps
 - Users can favorite a cocktail and view it in favorites. 
-- USers can search for a cocktail via a searchbar
+- Users can search for a cocktail via a searchbar
 - User can create cocktail posts with images. 
 - Have comments show next to their profile. 
