@@ -4,7 +4,6 @@ const Cocktail = require('../models/cocktail');
 
 
 module.exports = {
-
 create,
 delete: deleteComment,
 edit,
@@ -33,7 +32,7 @@ function edit(req, res) {
       // Ensure that the comment was created by the logged in user
       if (!commentSubdoc.user.equals(req.user._id)) return res.redirect(`/cocktails/${cocktail._id}`);
       // Update the text of the comment
-      commentSubdoc.text = req.body.text;
+      commentSubdoc.comment = req.body.comment;
       // Save the updated book
       cocktail.save(function(err) {
         // Redirect back to the book's show view

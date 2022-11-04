@@ -35,11 +35,10 @@
         <form id="deleteComment" action="/comments/<%= comment._id %>?_method=DELETE" method="POST">
           <button type="submit">X</button>
         </form>
-        <form id="updateComment" action="/comments/<%= comment._id %>?_method=PUT" method="POST">
-            <!-- Value attribute is being set to the comment's current text -->
-            <input name="comment" value="<%= comment.comment %>">
-            <button type="submit">UPDATE COMMENT</button>
-          </form>
+      
+         
+           <a href='/comments/<%=comment._id%>/edit'><button type="submit">UPDATE</button></a>
+          
 
       <% } %>
     </div>
