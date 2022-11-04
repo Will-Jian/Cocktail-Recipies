@@ -4,8 +4,8 @@ Users can log in via google accounts, and post and comments will be logged into 
 
 
 # Screenshot
-![Upon initilizing the page](./planning/start.png)
-![dealer won](./planning/lost.png)
+![Landging Page](./public/images/landing.png)
+![Cocktail Details](./public/images/details.png)
 
 
 
@@ -20,7 +20,7 @@ Users can log in via google accounts, and post and comments will be logged into 
 
 # Getting Started
 
-[Click to play Black Jack](https://will-jian.github.io/BlackJack/)
+[Click to go to Cocktail Club](https://cocktail-recipies.herokuapp.com/cocktails)
 
 # Next Steps
 - Users can favorite a cocktail and view it in favorites. 
