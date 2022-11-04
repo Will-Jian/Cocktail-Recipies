@@ -1,6 +1,5 @@
 <%- include('../partials/header') %>
 <form id="updateComment" action="/comments/<%= comment._id %>?_method=PUT" method="POST">
-    <!-- Value attribute is being set to the comment's current text -->
     <input name="comment" value="<%= comment.comment %>">
     <button type="submit">UPDATE COMMENT</button>
   </form>

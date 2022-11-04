@@ -17,18 +17,15 @@ function index(req, res) {
     });
   }
 
-
-
 function show(req, res) {
     Cocktail.findById(req.params.id, function(err, cocktail) {
-        res.render('cocktails/show', { title: 'Cocktail Detail', cocktail,  });
+      res.render('cocktails/show', { title: 'Cocktail Detail', cocktail,  });
     });
 }
 
 function newCocktail(req,res){
-        res.render('cocktails/new', { title: 'Add Cocktail' });
+    res.render('cocktails/new', { title: 'Add Cocktail' });
 }
-
 
 function create(req,res){
     const cocktail = new Cocktail(req.body);
@@ -39,10 +36,9 @@ function create(req,res){
     });
 }
 
-
 function deleteCocktail(req,res){
-Cocktail.findOneAndDelete(
-{_id: req.params.id, user: req.user._id}, function(err){
+    Cocktail.findOneAndDelete(
+    {_id: req.params.id, user: req.user._id}, function(err){
     res.redirect('/cocktails')
     }
    )
@@ -58,9 +54,7 @@ function edit (req,res) {
 function update(req, res) {
     Cocktail.findOneAndUpdate(
       {_id: req.params.id, userRecommending: req.user._id},
-      // update object with updated properties
       req.body,
-      // options object with new: true to make sure updated doc is returned
       {new: true},
       function(err, cocktail) {
         if (err || !cocktail) return res.redirect('/cocktails');

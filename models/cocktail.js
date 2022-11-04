@@ -1,8 +1,5 @@
 const mongoose = require('mongoose');
-// Shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
-
-
 
 
 const commentSchema = new Schema({
@@ -19,11 +16,7 @@ const commentSchema = new Schema({
       userAvatar: String
     }, {
         timestamps: true
-   
   });
-
-
-
 
 
 
@@ -48,9 +41,6 @@ const cocktailSchema = new Schema({
       },
       userName: String,
       userAvatar: String
-
-
-
 } );
 
   module.exports = mongoose.model('Cocktail', cocktailSchema);
