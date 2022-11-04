@@ -2,7 +2,6 @@ const Cocktail = require('../models/cocktail');
 
 
 
-
 module.exports = {
 create,
 delete: deleteComment,
@@ -12,7 +11,7 @@ update
 
 
 
-function edit(req, res) 
+function edit(req, res) {
     Cocktail.findOne({'comments._id': req.params.id}, function(err, cocktail) {
       const comment = cocktail.comments.id(req.params.id);
       res.render('comments/edit', {comment});
@@ -38,7 +37,7 @@ function deleteComment(req,res,){
         if (!cocktail || err) return res.redirect(`/cocktails/${cocktail._id}`);
         cocktail.comments.remove(req.params.id);
         cocktail.save(function(err) {
-        res.redirect(`/cocktails/${cocktail._id}`);
+          res.redirect(`/cocktails/${cocktail._id}`);
         });
       }
     );
